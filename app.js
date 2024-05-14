@@ -14,7 +14,7 @@ const PORT = 3000;
 connectToDatabase();
 
 app.use(
-  cors, 
+  // cors, 
   bodyParser.json(),
   express.static(path.join(__dirname, 'public')),
   usersRouter, 
@@ -27,4 +27,10 @@ app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`)
 })
 
-// node app.js
+// node app.js для проверки
+// 
+// ДЛЯ ОТПРАВКИ:
+// git pull __ синхронизация
+// git add -A __ Добавление изменений
+// git commit -m "" __ Комментарий к изменениям
+// git push origin reviev-branch __ отправка изменений на Гитхаб
