@@ -26,7 +26,13 @@ const createGame = async (req, res, next) => {
 
 const findGameById = async (req, res, next) => {
   try {
-    req.game = await games.findById(req.params.id);
+    req.game = await games
+      .findById(req.params.id)
+      .populate("categories")
+      .populate({
+        path: "users",
+        select: "-password"
+      })
     next();
   } catch (error) {
     res.setHeader("Content-Type", "application/json");
@@ -34,8 +40,19 @@ const findGameById = async (req, res, next) => {
   }
 };
 
+const updateGame = async (req, res, next) => {
+  try {
+    req.game = await games.findByIdAndUpdate(req.params.id, req.body);
+    next();
+  } catch (error) {
+    res.setHeader("Content-Type", "application/json");
+    res.status(400).send(JSON.stringify({ message: "Ошибка обновления игры" }));
+  }
+};
+
 module.exports = {
   findAllGames,
   createGame,
-  findGameById
+  findGameById,
+  updateGame
 };

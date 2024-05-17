@@ -33,4 +33,4 @@ app.listen(PORT, () => {
 // git pull __ синхронизация
 // git add -A __ Добавление изменений
 // git commit -m "" __ Комментарий к изменениям
-// git push origin reviev-branch __ отправка изменений на Гитхаб
+// git push origin 'reviev-branch' __ отправка изменений на Гитхаб

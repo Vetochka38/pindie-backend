@@ -1,12 +1,20 @@
-const { sendAllCategories, sendCategoryCreated } = require("./categories");
-const { sendAllGames, sendGameCreated } = require("./games");
-const { sendAllUsers, sendUserCreated } = require("./users");
+const { sendAllCategories, sendCategoryCreated, sendCategoryById, sendCategoryUpdated } = require("./categories");
+const { sendAllGames, sendGameCreated, sendGameById, sendGameUpdated } = require("./games");
+const { sendAllUsers, sendUserCreated, sendUserById, sendUserUpdated } = require("./users");
 
 module.exports = {
-    sendAllCategories, 
+    sendAllCategories,
     sendCategoryCreated,
-    sendAllGames, 
+    sendCategoryById,
+    sendCategoryUpdated,
+
+    sendAllGames,
     sendGameCreated,
+    sendGameById,
+    sendGameUpdated,
+
     sendAllUsers,
-    sendUserCreated
+    sendUserCreated,
+    sendUserById,
+    sendUserUpdated
 }
