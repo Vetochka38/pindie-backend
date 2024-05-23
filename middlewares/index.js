@@ -1,9 +1,15 @@
 const { findAllCategories, createCategory, findCategoryById, updateCategory, deleteCategory, checkIsCategoryExists, checkEmptyName } = require("./categories");
 const { findAllGames, createGame, findGameById, updateGame, deleteGame, checkEmptyFields, checkIfCategoriesAvaliable, checkIfUsersAreSafe, checkIsGameExists } = require("./games");
-const { findAllUsers, createUser, findUserById, updateUser, deleteUser, checkEmptyNameAndEmailAndPassword, checkEmptyNameAndEmail, checkIsUserExists } = require("./users");
+const { findAllUsers, createUser, findUserById, updateUser, deleteUser, checkEmptyNameAndEmailAndPassword, checkEmptyNameAndEmail, checkIsUserExists, hashPassword } = require("./users");
 const { cors } = require("./cors");
+const { checkAuth, checkCookiesJWT } = require("./auth");
 
 module.exports = {
+    cors,
+    checkAuth,
+    checkCookiesJWT,
+
+    // ./categories
     findAllCategories,
     createCategory,
     findCategoryById,
@@ -13,6 +19,7 @@ module.exports = {
     checkEmptyName,
     checkIsCategoryExists,
 
+    // ./games
     findAllGames,
     createGame,
     findGameById,
@@ -24,6 +31,7 @@ module.exports = {
     checkIfUsersAreSafe,
     checkIsGameExists,
 
+    // ./users
     findAllUsers,
     createUser,
     findUserById,
@@ -34,5 +42,5 @@ module.exports = {
     checkEmptyNameAndEmail,
     checkIsUserExists,
 
-    cors
+    hashPassword,
 }
