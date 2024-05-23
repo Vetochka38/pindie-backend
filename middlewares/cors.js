@@ -2,7 +2,7 @@ const allowedCors = [
     'https://practicum.yandex.ru/',
     'http://practicum.yandex.ru/',
     'localhost:3001',
-    'localhost:3000'
+    'http://localhost:3000'
 ];
 
 function cors(req, res, next) {
