@@ -2,7 +2,11 @@ const allowedCors = [
     'https://practicum.yandex.ru/',
     'http://practicum.yandex.ru/',
     'localhost:3001',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'http://pindie-backend-irk.nomoredomainswork.ru',
+    'https://pindie-backend-irk.nomoredomainswork.ru',
+    'http://pindie-by-vetochka.nomoredomainswork.ru',
+    'https://pindie-by-vetochka.nomoredomainswork.ru'
 ];
 
 function cors(req, res, next) {
