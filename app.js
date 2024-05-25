@@ -35,5 +35,5 @@ app.listen(PORT, () => {
 // git push origin 'reviev-branch' __ отправка изменений на Гитхаб
 //  ssh student@158.160.158.83 -i ./student_key 
 // cd my/pindie-backend
-// pindie-backend-irk.nomoredomainswork.ru
+// pindie-by-vetochka-back.nomoredomainswork.ru
 // pindie-by-vetochka.nomoredomainswork.ru
