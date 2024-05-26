@@ -24,8 +24,7 @@ const createGame = async (req, res, next) => {
     req.game = await games.create(req.body);
     next();
   } catch (error) {
-    res.setHeader("Content-Type", "application/json");
-    res.status(400).send(JSON.stringify({ message: "Ошибка создания игры" }));
+    res.status(400).send("Error creating game");
   }
 };
 
