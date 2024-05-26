@@ -50,8 +50,7 @@ const updateGame = async (req, res, next) => {
     req.game = await games.findByIdAndUpdate(req.params.id, req.body);
     next();
   } catch (error) {
-    res.setHeader("Content-Type", "application/json");
-    res.status(400).send(JSON.stringify({ message: "Ошибка обновления игры" }));
+    res.status(400).send({ message: "Ошибка обновления игры" });
   }
 };
 
@@ -118,7 +117,7 @@ const checkIsGameExists = async (req, res, next) => {
   });
   if (isInArray) {
     res.setHeader("Content-Type", "application/json");
-        res.status(400).send(JSON.stringify({ message: "Игра с таким названием уже существует" }));
+    res.status(400).send(JSON.stringify({ message: "Игра с таким названием уже существует" }));
   } else {
     next();
   }
